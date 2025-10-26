@@ -1,0 +1,117 @@
+body{
+    font-size: 20px;
+    text-align: center;
+    background-image: url("./back.jpg") ;
+    background-size: cover;
+
+}
+
+nav{
+    background-color: #0082e6;
+    border-radius: 10px;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul{
+    float: top;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: rgb(7, 7, 7);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(30, 144, 244, 0.7);
+}
+a:hover{
+    box-shadow: 0 0 40px rgb(249, 3, 3), 0 0 40px rgba(191, 4, 253, 0.7);
+    transform: scale(1.05);
+}
+
+a:active{
+    transform: scale(1);
+}
+
+marquee{
+    color: red;
+}
+form{
+    text-align: center;
+    /*border: 1px solid black;*/
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    width: 15%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 35%;
+}
+button{
+    font-size: 13px;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgb(65, 231, 240);
+}
+button:hover{
+    box-shadow: 0 0 40px rgb(65, 231, 240), 0 0 40px rgb(65, 231, 240);
+    transform: scale(1.05);
+}
+button:active{
+    transform: scale(1);
+}
+button a{
+    text-decoration: none;
+    color: grey;
+}
+
+p{
+    color: lightcyan;
+    background-color: transparent;
+    
+    backdrop-filter: blur(10px);
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    width: 80%;
+    height: 100%;
+    text-align: left;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgb(11, 90, 236);
+    position: absolute;
+    top: 70%;
+    bottom: 0.5%;
+    left: 1;
+    right: 0.2%;
+}
+
+p:hover{
+    box-shadow: 0 0 10px rgb(11, 7, 228), 0 0 40px rgb(11, 109, 246);
+    transform: scale(1.05);
+}
+
+p:active{
+    transform: scale(1);
+}
+
+h1{
+    color: white;
+    box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+    backdrop-filter: blur(20px);
+}

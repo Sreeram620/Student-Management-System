@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: lighter;
+            font-size: large;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 24px;
+        }
+        
+        label {
+            color: brown;
+            font-style: oblique;
+            text-decoration: aqua;
+        }
+        
+        input {
+            border-radius: 5px;
+            color: blue;
+            font-size: large;
+            font-variant: small-caps;
+            font-weight: 100;
+            font-style: italic;
+        }
+        
+        button {
+            width: 30%;
+            color: #fff;
+            background-color: #3498db;
+            padding: 5px;
+            font-size: medium;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+        
+        .box {
+            align-items: center;
+            width: 35%;
+            height: 200px;
+            background-color: lightblue;
+            border: 2px solid navy;
+            padding: 10px;
+            margin: 50px auto;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            padding: 10px;
+        }
+        
+        h6 {
+            color: red;
+        }
+        
+        a {
+            border: 2px dashed;
+            width: fit-content;
+            height: fit-content;
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>New User Registration</h1>
+    <div class="box">
+        <form action="register.php" method="POST">
+            <label>User ID (own): </label>
+            <input type="text" name="userid" placeholder="Enter User ID" maxlength="8" required /><br /><br />
+
+            <label>Create Password: </label>
+            <input type="password" name="password" id="pwd" placeholder="Enter your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain atleast one nunmber, one uppercase letter and lowercase letter, atleast 8 characters" title="Oneuppercase,Onelowercase,Onenumber Allowed"
+                required /><br> (Click the Checkbox to view your Password)
+            <input type="checkbox" onclick="pwd.type = this.checked ? 'text' : 'password' " /><br><br>
+            <label>Re-Enter Password: </label>
+            <input type="password" name="confirm_password" placeholder="Re-Enter Your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain atleast one nunmber, one uppercase letter and lowercase letter, atleast 8 characters" required />
+            <br /><br>
+            <button>Register</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

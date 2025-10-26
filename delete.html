@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: dimgray;
+            font-size: 10px;
+            font-weight: 100;
+            margin: auto;
+            text-align: center;
+            border-radius: 25px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        form {
+            background-color: beige;
+            font-size: medium;
+            border: 3px solid blue;
+            border-radius: 10px;
+            width: 25%;
+            height: 220px;
+            text-align: center;
+            margin-top: 250px;
+            margin-left: 550px;
+        }
+        
+        button {
+            padding: 10px;
+            width: 50%;
+            font-size: medium;
+            border-radius: 5px;
+            color: black;
+            background-color: rgb(175, 169, 169);
+        }
+        
+        button:hover {
+            background-color: #a49d9d;
+        }
+        
+        input {
+            border-radius: 5px;
+            font-size: medium;
+            color: black;
+        }
+    </style>
+
+
+    <form action="delete.php" method="POST">
+        <h2>
+            SEARCH :
+        </h2>
+        <label><h2>Student Roll Number : </h2></label>
+        <input type="text" placeholder="Enter Roll Number" name="rollno" required><br><br>
+
+        <button>Search</button>
+    </form>
+</body>
+
+</html>

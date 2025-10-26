@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding student</title>
+</head>
+
+<body>
+    <style>
+        body {
+            text-align: center;
+            margin: auto;
+            background-color: rgb(13, 226, 238);
+        }
+        
+        form {
+            border: 1px solid black;
+            width: 30%;
+            height: 520px;
+            border-radius: 20px;
+            margin: auto;
+            font-size: large;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        
+        input {
+            border-radius: 5px;
+            font-size: 15px;
+            text-align: center;
+            background-color: black;
+            color: rgb(238, 16, 123);
+        }
+        
+        button {
+            border-radius: 5px;
+            background-color: rgb(236, 243, 241);
+            width: 25%;
+        }
+        
+        label {
+            color: black;
+        }
+        
+        header h1 {
+            color: white;
+        }
+        
+        a {
+            text-decoration: none;
+            color: red;
+        }
+        
+        button {
+            padding: 10px;
+            width: 35%;
+            background-color: rgb(149, 80, 246);
+            color: white;
+        }
+        
+        button:hover {
+            background-color: blueviolet;
+        }
+    </style>
+    <header>
+        <h1>Form To Add Student</h1>
+    </header>
+    <form action="std_add.php" method="POST">
+        <br>
+        <br>
+
+        <label for="input">Student Name (Include Surname):</label><br>
+        <input type="text" placeholder="Enter Name" name="name" required>
+        <br>
+        <br>
+
+        <label for="input">Father Name (Include Surname):</label><br>
+        <input type="text" placeholder="Enter F.Name" name="fname" required>
+        <br>
+        <br>
+        <label for="input">Roll.no :</label><br>
+        <input type="text" placeholder="Enter Roll.no" name="roll_no" required maxlength="10">
+        <br>
+        <br>
+        <label for="input">Department:</label>
+        <select name="options" id="department">
+                <option value=""></option>
+                <option value="cse">CSE</option>
+                <option value="csd">CSD</option>
+                <option value="ece">ECE</option>
+                <option value="eee">EEE</option>
+                <option value="mech">MECH</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="input">Phone.no :</label><br>
+        <input type="phone" placeholder="Enter Phone.no" name="ph_no" maxlength="10" required>
+        <br><br>
+
+        <label for="input">DOB :</label><br>
+        <input type="date" placeholder="dd-mm-yyyy" name="dob" required>
+        <br><br>
+        <label for="input">Lecturer ID :</label><br>
+        <input type="text" placeholder="Enter Your ID" name="lec" required>
+        <br><br>
+        <button>Add Student</button>
+    </form>
+</body>
+
+</html>

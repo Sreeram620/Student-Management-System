@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Service Portal</title>
+</head>
+
+<body>
+    <style>
+        body {
+            text-align: center;
+            background-image: url("./comp.jpg");
+            background-size: cover;
+        }
+        
+        form {
+            /*border: 1px solid black;*/
+            display: flex;
+            flex-direction: column;
+            height: 550px;
+            width: 400px;
+            align-items: center;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
+            backdrop-filter: blur(5px);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        form h1 {
+            font-size: 40px;
+            font-family: bold;
+            color: bisque;
+            border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+            margin: 50px;
+        }
+        
+        form label {
+            font-size: 20px;
+            font-family: bold;
+            color: rgb(75, 232, 205);
+        }
+        
+        form input {
+            padding: 12px;
+            margin: 20px;
+            width: 50%;
+            outline: none;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+            color: rgb(61, 228, 206);
+            font-size: 1rem;
+        }
+        
+        form a {
+            text-decoration: none;
+            cursor: pointer;
+            color: lightblue;
+            text-align: left;
+        }
+        
+        form a:hover {
+            text-decoration: underline;
+        }
+        
+        button {
+            color: whitesmoke;
+            padding: 12px;
+            font-size: 19px;
+            margin: auto;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 50%;
+        }
+    </style>
+    <h1></h1>
+    <form action="index.php" method="POST">
+        <h1>Login</h1>
+
+        <label><b>Email :</b></label>
+
+        <input type="eamil" placeholder="Enter Email" name="email" required/>
+
+        <label for="password"><b>Password :</b></label>
+
+        <input type="password" placeholder="Enter Password" name="pwd" required/>
+
+
+        <a href="forget.html">Forget Password ?</a>
+        <br>
+        <a href="std_reg.html">New User ? Register here !</a>
+        <br>
+        <a href="index2.html">Student Login</a>
+
+
+        <button>Login</button>
+
+    </form>
+
+</body>
+
+</html>

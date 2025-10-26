@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-size: 20px;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+        
+        .nav {
+            background-color: #0082e6;
+            border-radius: 10px;
+            height: 70px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .nav ul {
+            float: top;
+            margin-right: 20px;
+        }
+        
+        .nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        
+        .nav ul li a {
+            color: rgb(7, 7, 7);
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        
+        .nav ul li a {
+            border: 2px solid;
+            text-decoration: none;
+            color: aliceblue;
+            cursor: pointer;
+            transition: 0.5s;
+            box-shadow: 0 0 10px rgba(30, 144, 244, 0.7);
+        }
+        
+        marquee {
+            color: red;
+        }
+        /*form {
+            text-align: center;
+            /*border: 1px solid black;
+            width: 15%;
+            height: 100%;
+            border-radius: 20px;
+            position: absolute;
+            top: 35%;
+        }*/
+        
+        .btn {
+            padding: 12px;
+            width: 20%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-left: 550px;
+            text-align: centers;
+            font-size: 15px;
+            border-radius: 10px;
+            background-color: #0082e6;
+            color: aliceblue;
+            cursor: pointer;
+            transition: 0.5s;
+            box-shadow: 0 0 10px rgb(65, 231, 240);
+        }
+        
+        .btn:hover {
+            box-shadow: 0 0 40px rgb(65, 231, 240), 0 0 40px rgb(65, 231, 240);
+            transform: scale(1.05);
+        }
+        
+        .btn:active {
+            transform: scale(1);
+        }
+        
+        .btn a {
+            text-decoration: none;
+            color: grey;
+        }
+        
+        .nav ul li .btn1 {
+            padding: 10px;
+            width: fit-content;
+            background-color: #0082e6;
+        }
+        
+        footer {
+            background-color: darkcyan;
+        }
+        
+        h4,
+        h5 {
+            margin-top: 5px;
+            text-align: left;
+        }
+        
+        footer a {
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            color: white;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <h1>Welcome To Student Management Service</h1>
+    <div class="nav">
+        <ul>
+            <li><a href="about_man.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+    </div>
+    <br>
+
+    <div class="container">
+        <div class="form">
+            <div class="buttons">
+                <p>This Is A Student Management Service Portal , In This Website Student Data Will Be Published</p>
+                <form action="add_man.html"><button class="btn">Add Students</button></form>
+                <br><br>
+                <form action="view.php"><button class="btn">View Students</button></form><br><br>
+                <form action="att_search.html"><button class="btn">Add Attendence</button></form><br><br>
+                <form action="search_man.html"><button class="btn">Search Student</button></form><br><br>
+                <form action="delete.html"><button class="btn">Delete Students</button></form><br><br>
+                <form action="logout.php"><button class="btn">Logout</button></form>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="info">
+            <footer>
+
+                <h4>
+                    Designed and Developed by Sreeram
+                </h4>
+                <h5 style="font-weight: 100;">Email :</h5>
+                <h5 style="font-weight: 100;">Phone Number :</h5>
+                <a href="about_man.html">About us</a><br>
+                <a href="">Contact us</a><br>
+                <a href="management_man.html">Home</a>
+                <p>&copy 2025 All rights Reserved</p>
+
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

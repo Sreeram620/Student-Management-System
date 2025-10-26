@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+    background-color: aquamarine;
+}
+
+table, th, td{
+    text-align: center;
+    margin: auto;
+    width: 15%;
+    border: 1px solid black;
+    border-radius: 10px;
+}

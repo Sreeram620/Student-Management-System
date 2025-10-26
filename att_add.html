@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: dimgray;
+            font-size: 10px;
+            font-weight: 100;
+            margin: auto;
+            text-align: center;
+            border-radius: 25px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        form {
+            background-color: beige;
+            font-size: medium;
+            border: 3px solid blue;
+            border-radius: 10px;
+            width: 25%;
+            height: 330px;
+            text-align: center;
+            margin-top: 160px;
+            margin-left: 550px;
+        }
+        
+        button {
+            padding: 10px;
+            width: 50%;
+            font-size: medium;
+            border-radius: 5px;
+            color: black;
+            background-color: rgb(175, 169, 169);
+        }
+        
+        button:hover {
+            background-color: #a49d9d;
+        }
+        
+        input {
+            border-radius: 5px;
+            font-size: medium;
+            color: black;
+        }
+    </style>
+
+
+    <form action="att_added.php" method="POST">
+        <h2>
+            Add Attendence :
+        </h2>
+        <label><h2>Confirm the Roll Number (again) : </h2></label>
+        <input type="text" placeholder="Enter Roll Number" name="roll" required><br><br>
+        <label><h2>Enter Attendence of the Student : </h2></label>
+        <input type="text" placeholder="Enter Attendence" name="atten" required><br><br>
+
+        <button>Add</button>
+    </form>
+</body>
+
+</html>
