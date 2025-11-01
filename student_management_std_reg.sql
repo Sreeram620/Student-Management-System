@@ -16,31 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `user_details`
+-- Table structure for table `std_reg`
 --
 
-DROP TABLE IF EXISTS `user_details`;
+DROP TABLE IF EXISTS `std_reg`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `user_details` (
+CREATE TABLE `std_reg` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(55) NOT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `ph_no` bigint DEFAULT NULL,
-  `user_pass` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `ph_no` (`ph_no`)
+  `user_id` varchar(8) DEFAULT NULL,
+  `pass` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `user_details`
+-- Dumping data for table `std_reg`
 --
 
-LOCK TABLES `user_details` WRITE;
-/*!40000 ALTER TABLE `user_details` DISABLE KEYS */;
-INSERT INTO `user_details` VALUES (1,'Thatikonda Sreeram','sriramthatikonda5@gmail.com',6300412926,'$2y$10$TLPulO..80KYJm7YFOEPYO0PGmOSlJGvYEu9ACum0NoW65TO/Aebi');
-/*!40000 ALTER TABLE `user_details` ENABLE KEYS */;
+LOCK TABLES `std_reg` WRITE;
+/*!40000 ALTER TABLE `std_reg` DISABLE KEYS */;
+INSERT INTO `std_reg` VALUES (1,'40850860','$2y$10$1TDRLWWt1LGMwx/owK6b8OwiYn/iwJ19zC4HQCSXcdeL8iPBpubci');
+/*!40000 ALTER TABLE `std_reg` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
