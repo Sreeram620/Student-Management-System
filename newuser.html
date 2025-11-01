@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: lighter;
+            font-size: large;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 24px;
+        }
+        
+        label {
+            color: brown;
+            font-style: oblique;
+            text-decoration: aqua;
+        }
+        
+        input {
+            border-radius: 5px;
+            color: blue;
+            font-size: large;
+            font-variant: small-caps;
+            font-weight: 100;
+            font-style: italic;
+        }
+        
+        button {
+            width: 30%;
+            color: #fff;
+            background-color: #3498db;
+            padding: 5px;
+            font-size: medium;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+        
+        .box {
+            align-items: center;
+            width: 35%;
+            height: 450px;
+            background-color: lightblue;
+            border: 2px solid navy;
+            padding: 10px;
+            margin: 50px auto;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        h1 {
+            padding: 10px;
+        }
+        
+        h6 {
+            color: red;
+        }
+        
+        a {
+            border: 2px dashed;
+            width: fit-content;
+            height: fit-content;
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>New User Registration</h1>
+    <div class="box">
+        <form action="newuserreg.php" method="POST" class="form">
+            <label>Name: </label>
+            <input type="text" name="name" placeholder="Enter your Name" required /><br /><br />
+
+            <label>Email: </label>
+            <input type="email" name="email" placeholder="Enter your Email" required /><br /><br />
+
+            <label>Phonenumber: </label>
+            <input type="tel" name="phone" placeholder="Enter your Number" required maxlength="10" pattern="[0-9]{10}" title="Enter 10 digit phone number" /><br /><br />
+
+            <label>Create Password: </label>
+            <input type="password" name="password" id="pwd" placeholder="Enter your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain atleast one nunmber, one uppercase letter and lowercase letter, atleast 8 characters" title="Oneuppercase,Onelowercase,Onenumber Allowed"
+                required /><br> (Click the Checkbox to view your Password)
+            <input type="checkbox" onclick="pwd.type = this.checked ? 'text' : 'password' " /><br><br>
+            <label>Re-Enter Password: </label>
+            <input type="password" name="confirm_password" placeholder="Re-Enter Your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain atleast one nunmber, one uppercase letter and lowercase letter, atleast 8 characters" required />
+            <br /><br>
+
+            <body onload="generateCaptcha()">
+                <form id="registerForm">
+                    <div id="captchaBox"></div>
+                    <input type="button" onclick="generateCaptcha()" value="🔃" /><br><br>
+                    <label for="captchaInput">Enter Captcha:</label>
+                    <input type="text" id="captchaInput" required><br><br>
+                    <button type="submit" value="register" onclick="rego.html;">Register</button>
+                    <div id="message"></div>
+                    <br><br>
+                    <a href="search.html">Search user if exists</a>
+                </form>
+
+
+                <script>
+                    let generatedCaptcha = "";
+
+                    function generateCaptcha() {
+                        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                        let captcha = "";
+                        for (let i = 0; i < 5; i++) {
+                            captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+                        }
+                        generatedCaptcha = captcha;
+                        document.getElementById("captchaBox").textContent = generatedCaptcha;
+                        document.getElementById("captchaInput").value = "";
+                        document.getElementById("message").textContent = "";
+                    }
+
+                    document.getElementById("registerForm").onsubmit = function(event) {
+                        event.preventDefault();
+
+                        let input = document.getElementById("captchaInput").value;
+                        let messageBox = document.getElementById("message");
+
+                        if (input === generatedCaptcha) {
+                            messageBox.textContent = "Registration successful!";
+                            messageBox.className = "success";
+                            // Here put the code for actual form registration, e.g. send data to server
+                        } else {
+                            messageBox.textContent = "Incorrect captcha. Please try again.";
+                            messageBox.className = "";
+                            generateCaptcha();
+                        }
+                    };
+                </script>
+            </body>
+
+</html>
+
+
+</form>
+</div>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register with Captcha</title>
+    <style>
+        #captchaBox {
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 3px;
+            background: #f0f0f0;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        #message {
+            color: red;
+        }
+        
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+
+
+
+<script>
+    let generatedCaptcha = "";
+
+    function generateCaptcha() {
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        let captcha = "";
+        for (let i = 0; i < 5; i++) {
+            captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        generatedCaptcha = captcha;
+        document.getElementById("captchaBox").textContent = generatedCaptcha;
+        document.getElementById("captchaInput").value = "";
+        document.getElementById("message").textContent = "";
+    }
+
+    document.getElementById("registerForm").onsubmit = function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        let input = document.getElementById("captchaInput").value;
+        let messageBox = document.getElementById("message");
+
+        if (input === generatedCaptcha) {
+            messageBox.textContent = "Registration successful!";
+            messageBox.className = "success";
+            // Here put the code for actual form registration, e.g. send data to server
+        } else {
+            messageBox.textContent = "Incorrect captcha. Please try again.";
+            messageBox.className = "";
+            generateCaptcha();
+        }
+    };
+</script>
+</body>
+
+</html>
+
+</body>
+
+</html>
